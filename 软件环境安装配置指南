@@ -1,0 +1,78 @@
+windows环境
+1.windows10 
+安装windows10 64位，家庭版/专业版不限，visual studio c++组件需要安装升级完整，python部分库对此有依赖。
+
+2.python3.9.6 windows 64位
+1）python官网主页： https://www.python.org/
+2）python windows版下载主页：https://www.python.org/downloads/windows/
+3）python windows 3.9.6 64位版下载地址：
+https://www.python.org/ftp/python/3.9.6/python-3.9.6-amd64.exe
+4）python windows 3.9.6 64位版国内镜像下载地址：
+http://npm.taobao.org/mirrors/python/3.9.6/python-3.9.6-amd64.exe
+5）python镜像配置： （注：python镜像对于提高python库的下载速度至关重要，强烈建议配置）
+windows下，直接在user目录中创建一个pip目录，再新建文件pip.ini（例如：C:\Users\songbh\pip\pip.ini）:  （注：songbh是本机用户名，大家注意改成自己电脑登录用户名）
+创建的pip.ini内容如下：
+[global]
+index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+[install]
+trusted-host=mirrors.aliyun.com
+3. pip升级到最新版
+4. anaconda (可选)
+5. CUDA (可选，视显卡支持情况而定)
+https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exe_local
+
+
+6.  PyTorch
+1）配置&下载页面：https://pytorch.org/get-started/locally/
+2）生成下载地址（加镜像）：
+pip install torch===1.7.1+cu110 torchvision===0.8.2+cu110 torchaudio===0.7.2 -f https://download.pytorch.org/whl/torch_stable.html -i http://mirrors.aliyun.com/pypi/simple
+
+7.  Tensorflow
+1）中文官网：https://tensorflow.google.cn/?hl=zh-cn
+2）安装：https://tensorflow.google.cn/install?hl=zh_cn
+64 位系统上测试过 TensorFlow 并且这些系统支持 TensorFlow：
+Python 3.5–3.8
+Ubuntu 16.04 或更高版本
+Windows 7 或更高版本（含C++可再发行软件包：
+https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads）
+macOS 10.12.6 (Sierra) 或更高版本（不支持 GPU）
+GPU需要使用支持CUDA®的显卡（只适用于Ubuntu和Windows）
+
+使用Python的pip软件包管理器安装TensorFlow，TensorFlow 2软件包需要使用高于19.0的pip版本。
+# Requires the latest pip
+pip install --upgrade pip
+
+# Current stable release for CPU and GPU
+pip install tensorflow
+
+8.  Python相关库：NumPy,  Matplotlib, Pandas, Keras
+9. pycharm-community-2020.3.2 for windows 
+10. Docker(可选)
+1）windows版docker下载地址：https://hub.docker.com/editions/community/docker-ce-desktop-windows/
+Requires Microsoft Windows 10 Professional or Enterprise 64-bit, or Windows 10 Home 64-bit with WSL 2.
+2）安装
+wsl.exe --install
+
+11. Jupyter
+1）主页：https://jupyter.org/
+2）安装指导：https://jupyter.org/install.html
+安装jupyterlab：
+pip install jupyterlab
+安装Jupyter Notebook：
+pip install notebook
+运行Jupyter Notebook：
+jupyter notebook
+
+12. OpenCV
+1)主页：https://opencv.org/
+2)OpenCV下载地址：https://opencv.org/releases/
+3)安装指导：双击运行安装包，安装提示进行安装即可。
+4)OpenCV配置：按照以下步骤进行环境变量配置：
+开始菜单右键->系统->系统信息->高级系统设置->高级->环境变量>“系统变量中的PATH”->编辑->新建->添加OpenCV相关路径后点击确定即可。
+\安装路径目录\opencv\build\x64\vc15\bin
+5)Python安装
+pip install opencv-python
+
+
+
+===================================
